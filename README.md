@@ -5,7 +5,8 @@ A tiny shell script to create tiny container images of [ANTs](https://github.com
 ## Build It Yourself
 
 ```shell
-docker buildx build -t docker.io/fnndsc/n4biasfieldcorrection:2.5.0 --build-arg prog=N4BiasFieldCorrection --push --platform linux/amd64,linux/arm64,linux/ppc64le .
+./create.sh N4BiasFieldCorrection > Dockerfile
+docker buildx build --platform linux/amd64,linux/arm64 -t docker.io/fnndsc/n4biasfieldcorrection:2.5.0 -t docker.io/fnndsc/n4biasfieldcorrection:latest --push .
 ```
 
 ## Images We Provide
