@@ -8,7 +8,7 @@ fi
 exec cat << EOF
 FROM docker.io/library/debian:bookworm-slim
 
-COPY --from=docker.io/fnndsc/ants:2.5.0-notshared "/opt/ants/bin/$1" "/usr/local/bin/$1"
+COPY --from=docker.io/fnndsc/ants:2.6.5-notshared "/opt/ants/bin/$1" "/usr/local/bin/$1"
 
 CMD ["/usr/local/bin/$1"]
 EOF
